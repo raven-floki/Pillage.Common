@@ -19,7 +19,7 @@
 		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 		<Optimize>True</Optimize>
 		<IsTrimmable>false</IsTrimmable>
-		<Nullable>enable</Nullable>
+		<Nullable>false</Nullable>
 		<WarningsAsErrors>RS0030</WarningsAsErrors>
 	</PropertyGroup>
 
@@ -32,4 +32,8 @@
 		<DocumentationFile></DocumentationFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\ECommons\ECommons\ECommons.csproj" />
+	</ItemGroup>
 </Project>
