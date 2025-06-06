@@ -28,12 +28,12 @@
 		<EnableWindowsTargeting>true</EnableWindowsTargeting>
 	</PropertyGroup>
 
-	<PropertyGroup Label="Documentation">
+	<!--<PropertyGroup Label="Documentation">
 		<DocumentationFile></DocumentationFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
+	</PropertyGroup>-->
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\ECommons\ECommons\ECommons.csproj" />
+	  <ProjectReference Include="..\ECommons\ECommons\ECommons.csproj" />
 	</ItemGroup>
 </Project>
