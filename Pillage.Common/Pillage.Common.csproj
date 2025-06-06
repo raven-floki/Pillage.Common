@@ -8,7 +8,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net9.0-windows7.0</TargetFramework>
-		<Platforms>x64</Platforms>
+		<Platforms>x64;AnyCPU</Platforms>
 		<LangVersion>preview</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
@@ -19,7 +19,7 @@
 		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 		<Optimize>True</Optimize>
 		<IsTrimmable>false</IsTrimmable>
-		<Nullable>false</Nullable>
+		<Nullable>enable</Nullable>
 		<WarningsAsErrors>RS0030</WarningsAsErrors>
 	</PropertyGroup>
 
