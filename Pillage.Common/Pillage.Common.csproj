@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Dalamud.NET.Sdk/12.0.2">
 	<PropertyGroup>
 		<Authors>Floki</Authors>
-		<Version>0.0.0.1</Version>
+		<Version>0.0.1</Version>
 		<Configurations>Debug;Release;DebugForms;ReleaseForms</Configurations>
 	</PropertyGroup>
 
