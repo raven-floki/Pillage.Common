@@ -1,0 +1,20 @@
+{
+    "Author": "Floki",
+    "Name": "Pillage.Common",
+    "Punchline": "Time is your most important resource...",
+    "Description": "Gathering automation for miner/botanist.//n//nThis plugin is a proof of concept.  Its intention is to combine several different plugins worth of functionality into one master gathering plugin.This plugin can be used to automate task on its own, or it can be controlledby other plugins to perform tasks.",
+    "InternalName": "Landman",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 13,
+    "IconUrl": "",
+    "RepoUrl": "https://github.com/raven-floki/landman",
+    "Tags": [
+        "Gathering",
+        "Disciple of Land",
+        "Land",
+        "Miner",
+      "Botanist",
+      "Spearfishing"
+    ],
+    "ChangeLog": "- Inital commits"
+}
