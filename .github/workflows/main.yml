@@ -6,7 +6,7 @@ name: Create release and publish NuGet
 on:
   push:
     branches:
-      - "main"
+      - "nuget-workflow"
 
 permissions: 
     contents: write
