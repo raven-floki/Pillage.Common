@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/12.0.2">
+<Project Sdk="Dalamud.NET.Sdk/13.0.0">
 	<PropertyGroup>
 		<Authors>Floki</Authors>
 		<Version>0.0.1</Version>
@@ -23,10 +23,9 @@
 		<WarningsAsErrors>RS0030</WarningsAsErrors>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)' == 'DebugForms' or '$(Configuration)' == 'ReleaseForms'">
-		<UseWindowsForms>true</UseWindowsForms>
-		<EnableWindowsTargeting>true</EnableWindowsTargeting>
-	</PropertyGroup>
+	<ItemGroup>
+	  <Content Include="pillage.common.json" />
+	</ItemGroup>
 
 	<!--<PropertyGroup Label="Documentation">
 		<DocumentationFile></DocumentationFile>

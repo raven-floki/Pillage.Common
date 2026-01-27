@@ -19,7 +19,7 @@ public class Pillage
     [PluginService] public static IFlyTextGui FlyText { get; private set; }
     [PluginService] public static IFramework Framework { get; private set; }
     [PluginService] public static IGameGui GameGui { get; private set; }
-    [PluginService] public static IGameNetwork GameNetwork { get; private set; }
+    //[PluginService] public static IGameNetwork GameNetwork { get; private set; }
     [PluginService] public static IJobGauges JobGauges { get; private set; }
     [PluginService] public static IKeyState KeyState { get; private set; }
     [PluginService] public static IObjectTable Objects { get; private set; }
@@ -46,21 +46,15 @@ public class Pillage
     [PluginService] public static IContextMenu ContextMenu { get; private set; }
     [PluginService] public static IMarketBoard MarketBoard { get; private set; }
 
-    internal static bool IsInitialized = false;
     public static void Init(IDalamudPluginInterface pluginInterface)
     {
-        if (IsInitialized)
-        {
-            //PluginLog.Debug("Services already initialized, skipping");
-        }
         try
         {
             pluginInterface.Create<Pillage>();
-            IsInitialized = true;
         }
         catch (Exception ex)
         {
-            //ex.Log();
+            Log.Error("Pillage Services Init Error: " + ex.Message);
         }
     }
 }
