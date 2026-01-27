@@ -10,13 +10,13 @@
 		<Company>Pillage</Company>
 		<PackageDescription>Pillage Common Libraries/Features</PackageDescription>
 		<RepositoryUrl>https://github.com/raven-floki/Pillage.Common</RepositoryUrl>
-		<!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<NoWarn>CS0162;CS1591;CA1401</NoWarn>
-		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>-->
+		<!--<NoWarn>CS0162;CS1591;CA1401</NoWarn>-->
 	</PropertyGroup>
 
 	<PropertyGroup>
