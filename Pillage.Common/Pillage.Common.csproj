@@ -2,7 +2,7 @@
 <Project Sdk="Dalamud.NET.Sdk/13.0.0">
 	<PropertyGroup>
 		<Authors>Floki</Authors>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<Configurations>Debug;Release;DebugForms;ReleaseForms</Configurations>
 	</PropertyGroup>
 
