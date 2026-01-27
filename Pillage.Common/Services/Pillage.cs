@@ -46,11 +46,17 @@ public class Pillage
     [PluginService] public static IContextMenu ContextMenu { get; private set; }
     [PluginService] public static IMarketBoard MarketBoard { get; private set; }
 
+    internal static bool IsInitialized = false;
     public static void Init(IDalamudPluginInterface pluginInterface)
     {
+        if (IsInitialized)
+        {
+            Log.Debug("Services already initialized, skipping");
+        }
         try
         {
             pluginInterface.Create<Pillage>();
+            IsInitialized = true;
         }
         catch (Exception ex)
         {
