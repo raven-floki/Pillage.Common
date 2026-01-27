@@ -119,6 +119,7 @@ jobs:
     if: success()
     env:
       # Temporary token for workflow authentication to create a release
+      GH_TOKEN: ${{ github.token }}
       NUGET_PACKAGE_TOKEN: ${{ secrets.NUGET_PACKAGE_TOKEN }}
     steps:
       - name: Checkout repository
