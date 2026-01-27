@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Dalamud.NET.Sdk/13.0.0">
 	<PropertyGroup>
 		<Authors>Floki</Authors>
-		<Version>0.0.0.1</Version>
+		<Version>0.0.1</Version>
 		<Configurations>Debug;Release;DebugForms;ReleaseForms</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<TargetFramework>net9.0-windows7.0</TargetFramework>
-		<Platforms>x64</Platforms>
+		<Platforms>x64;AnyCPU</Platforms>
 		<LangVersion>preview</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
@@ -23,13 +23,12 @@
 		<WarningsAsErrors>RS0030</WarningsAsErrors>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)' == 'DebugForms' or '$(Configuration)' == 'ReleaseForms'">
-		<UseWindowsForms>true</UseWindowsForms>
-		<EnableWindowsTargeting>true</EnableWindowsTargeting>
-	</PropertyGroup>
+	<ItemGroup>
+	  <Content Include="pillage.common.json" />
+	</ItemGroup>
 
-	<PropertyGroup Label="Documentation">
+	<!--<PropertyGroup Label="Documentation">
 		<DocumentationFile></DocumentationFile>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
+	</PropertyGroup>-->
 </Project>
