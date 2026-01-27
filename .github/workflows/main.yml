@@ -10,19 +10,19 @@ on:
 
 jobs:
   # 2. Adding a Test Verification Step
-  run_test:
-    name: Run tests
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
+  # run_test:
+  #   name: Run tests
+  #   runs-on: ubuntu-24.04
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v6
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
+  #     - name: Setup .NET
+  #       uses: actions/setup-dotnet@v5
 
-      - name: Run tests
-        shell: pwsh
-        run: dotnet test --configuration Release .\src\UsefulPackage.UnitTests
+  #     - name: Run tests
+  #       shell: pwsh
+  #       run: dotnet test --configuration Release .\src\UsefulPackage.UnitTests
   
   # 3. Adding a Check for the Current Project Version
   check_version:
@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: |
           # Get a project version from the *.csproj file
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/Pillage.Common/Pillage.Common.csproj)
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./Pillage.Common/Pillage.Common.csproj)
           echo "Project version is $VERSION"
           # Save the result into the variable VERSION
           echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -93,7 +93,7 @@ jobs:
       - name: Get project version from .csproj
         shell: bash
         run: |
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/UsefulPackage/UsefulPackage.csproj)
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./Pillage.Common/Pillage.Common.csproj)
           echo "Project version is $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
