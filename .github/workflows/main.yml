@@ -163,6 +163,9 @@ jobs:
           dotnet-version: '10.0.x'
 
       # Build and pack package
+      - name: Restore 
+        run: dotnet restore ./Pillage.Common/Pillage.Common.csproj
+  
       - name: Build 
         run: dotnet build ./Pillage.Common/Pillage.Common.csproj --configuration Release --no-restore
 
