@@ -19,6 +19,14 @@
 		<NoWarn>CS0162;CS1591;CA1401</NoWarn>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Pillage.Common</Title>
+		<PackageProjectUrl>https://github.com/raven-floki/Pillage.Common</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/raven-floki/Pillage.Common</RepositoryUrl>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<PackageReference Include="ECommons" Version="3.1.0.19" />
 	</ItemGroup>
