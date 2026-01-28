@@ -164,7 +164,7 @@ jobs:
 
       # Build and pack package
       - name: Build 
-        run: dotnet build ./Pillage.Common/Pillage.Common/Pillage.Common.csproj --configuration Release --no-restore
+        run: dotnet build ./Pillage.Common/Pillage.Common.csproj --configuration Release --no-restore
 
       - name: Pack
         shell: pwsh
