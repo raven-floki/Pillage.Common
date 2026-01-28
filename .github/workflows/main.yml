@@ -163,7 +163,7 @@ jobs:
       # Build and pack package
       - name: Pack
         shell: pwsh
-        run: dotnet pack ./Pillage.Common/Pillage.Common.csproj --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack ./Pillage.Common.csproj --configuration Release --output ${{ env.NuGetDirectory }}
 
       # Uploading an artifact to the repository for access from other jobs
       - uses: actions/upload-artifact@v6
