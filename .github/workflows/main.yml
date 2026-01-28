@@ -129,7 +129,7 @@ jobs:
         run: |
           git fetch --tags
           NEW_TAG=$(git describe --tags --abbrev=0 origin/main)
-          echo "Latest tag on master: $NEW_TAG"
+          echo "Latest tag on main: $NEW_TAG"
           gh release create $NEW_TAG \
               --repo="$GITHUB_REPOSITORY" \
               --title="${NEW_TAG#v}" \
@@ -149,7 +149,7 @@ jobs:
     needs: tag_and_push
     if: success()
     env:
-      NuGetDirectory: ${{ github.workspace}}/nuget
+      NuGetDirectory: ${{ github.workspace }}/nuget
     # List of commands to be run sequentially
     steps:
       # Checkout on a branch commit to access the source code
@@ -163,7 +163,10 @@ jobs:
       # Build and pack package
       - name: Pack
         shell: pwsh
-        run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+        run: |
+          echo "NuGetDirectory ${{ env.NuGetDirectory }}"
+          echo "github workspace ${{ github.workspace }}"
+          dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
 
       # Uploading an artifact to the repository for access from other jobs
       - uses: actions/upload-artifact@v6
