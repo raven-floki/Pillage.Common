@@ -5,7 +5,7 @@
 		<Platforms>x64</Platforms>
 		<TargetFramework>net10.0-windows7.0</TargetFramework>
 		<PackageId>Pillage.Common</PackageId>
-		<Version>0.1.13</Version>
+		<Version>0.1.14</Version>
 		<Authors>Floki</Authors>
 		<Company>Pillage</Company>
 		<PackageDescription>Pillage Common Libraries/Features</PackageDescription>
