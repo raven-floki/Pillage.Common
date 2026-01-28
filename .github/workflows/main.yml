@@ -163,13 +163,12 @@ jobs:
           dotnet-version: '10.0.x'
 
       # Build and pack package
+      - name: Build 
+        run: dotnet build Pillage.Common/Pillage.Common/Pillage.Common.csproj --configuration Release --no-restore
+
       - name: Pack
         shell: pwsh
-        working-directory: Pillage.Common/Pillage.Common
-        run: |
-          echo "NuGetDirectory ${{ env.NuGetDirectory }}"
-          echo "github workspace ${{ github.workspace }}"
-          dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
 
       # Uploading an artifact to the repository for access from other jobs
       - uses: actions/upload-artifact@v6
