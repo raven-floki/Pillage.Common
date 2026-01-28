@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace Landman;
+namespace Pillage.Common.Commands;
 
 internal static class Commands
 {
