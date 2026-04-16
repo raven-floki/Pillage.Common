@@ -1,34 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Configurations>Debug;Release</Configurations>
 		<Platforms>x64</Platforms>
 		<TargetFramework>net10.0-windows7.0</TargetFramework>
 		<PackageId>Pillage.Common</PackageId>
-		<Version>0.1.2</Version>
+		<Version>0.1.18</Version>
 		<Authors>Floki</Authors>
 		<Company>Pillage</Company>
 		<PackageDescription>Pillage Common Libraries/Features</PackageDescription>
 		<RepositoryUrl>https://github.com/raven-floki/Pillage.Common</RepositoryUrl>
-		<!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
 		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<!--<NoWarn>CS0162;CS1591;CA1401</NoWarn>-->
+		<NoWarn>CS0162;CS1591;CA1401</NoWarn>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<DalamudLibPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
-		<DalamudLibPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">$(HOME)/.xlcore/dalamud/Hooks/dev/</DalamudLibPath>
-		<DalamudLibPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">$(HOME)/Library/Application Support/XIV on Mac/dalamud/Hooks/dev/</DalamudLibPath>
-		<DalamudLibPath Condition="$(DALAMUD_HOME) != ''">$(DALAMUD_HOME)/</DalamudLibPath>
+		<LangVersion>preview</LangVersion>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Pillage.Common</Title>
+		<PackageProjectUrl>https://github.com/raven-floki/Pillage.Common</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/raven-floki/Pillage.Common</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="ECommons" Version="3.1.0.19" />
 	</ItemGroup>
+
+	<PropertyGroup Label="Documentation">
+		<DocumentationFile></DocumentationFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DalamudLibPath>$(appdata)\xivlauncher\Addon\Hooks\dev\</DalamudLibPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
+		<Dalamud_Home Condition="'$(DALAMUD_HOME)' == ''">$(HOME)/.xlcore/dalamud/Hooks/dev/</Dalamud_Home>
+		<DalamudLibPath>$(DALAMUD_HOME)/</DalamudLibPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<Reference Include="Dalamud">

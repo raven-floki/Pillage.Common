@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace Landman;
+namespace Pillage.Common.Commands;
 
 internal static class Commands
 {
@@ -14,7 +14,10 @@ internal static class Commands
 
         foreach (var method in methodsWithAttribute)
         {
+            var attribute = (ChatCommandAttribute)method.GetCustomAttributes(typeof(ChatCommandAttribute), false)
+                .FirstOrDefault();
             Console.WriteLine($"Method: {method.Name}");
+            Console.WriteLine($"Command: {attribute.Command}");
         }
     }
 }
@@ -23,8 +26,8 @@ internal static class Commands
 [AttributeUsage(AttributeTargets.Method)]
 public class ChatCommandAttribute(string command, string options) : Attribute
 {
-    string Command = command;
-    string Options = options;
+    public string Command = command;
+    public string Options = options;
 }
 
 public static class MyStaticClass

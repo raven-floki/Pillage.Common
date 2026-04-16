@@ -1,4 +1,4 @@
-﻿namespace GoldCup.PillageCommands;
+﻿namespace Pillage.Common.Commands;
 
 internal class CommandManager
 {
